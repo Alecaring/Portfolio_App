@@ -1,0 +1,437 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Layer nero al 100% */
+.noneBannerBlack {
+  position: fixed;
+  right: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.showBannerBlack {
+  position: fixed;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000066; /* Colore del layer nero */
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s ease-out, visibility 1s ease-out;
+  pointer-events: all;
+  z-index: 1000;
+}
+
+/* Layer al 45% */
+.none {
+  position: fixed;
+  right: -100%;
+  width: 45%;
+  height: 100%;
+  transform: translateX(100%);
+  opacity: 0;
+  visibility: hidden;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  pointer-events: none;
+}
+
+.show {
+  position: fixed;
+  right: 0;
+  width: 170%;
+  height: 100%;
+  transform: translateX(0%);
+  opacity: 1;
+  visibility: visible;
+  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
+  pointer-events: all;
+  display: flex;
+  justify-content: flex-end;
+  z-index: 1000;
+}
+
+.containerWindow {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+#video {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  object-fit: cover;
+}
+
+/* Box Left */
+.boxContainLeft {
+  width: 45%;
+  height: 100%;
+}
+
+.boxContainLeft_menu_topSec {
+  background-color: red;
+  padding: 2rem;
+  color: rgb(0, 0, 0);
+  font-weight: 100;
+  font-size: 2rem;
+}
+
+.boxContainLeft_menu_topSec_btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+/* Box Left - Top */
+.BoxLeftTop {
+  width: 100%;
+  height: 70%;
+}
+
+.BoxLeftTopHeader {
+  width: 100%;
+  padding: 2rem;
+}
+
+.BoxLeftTopHeader_ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+}
+
+.BoxLeftTopHeader_ul_li {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.circle {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 4px solid rgb(255, 255, 255);
+}
+
+.BoxLeftTopHeader_ul_li_p {
+  font-size: 1.6rem;
+  color: white;
+}
+
+/* Box Left - Section */
+.BoxLeftTopSection {
+  width: 100%;
+  padding: 2rem;
+  color: white;
+}
+
+.BoxLeftTopSection_h1,
+.BoxLeftTopSection_h2,
+.BoxLeftTopSection_h3 {
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+.BoxLeftTopSection_h1 {
+  color: rgb(170, 169, 169);
+}
+
+.BoxLeftBottom {
+  width: 100%;
+  height: 30%;
+  color: white;
+  display: flex;
+  align-items: flex-end;
+}
+
+.BoxLeftBottom_left,
+.BoxLeftBottom_right {
+  width: 50%;
+  height: 50%;
+}
+
+.BoxLeftBottom_left_ul {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: .5rem;
+  letter-spacing: 1px;
+  font-weight: 100;
+}
+
+.BoxLeftBottom_right_ul {
+  width: 100%;
+  height: 100%;
+  padding: 2rem;
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  letter-spacing: 1px;
+  gap: .7rem;
+  font-weight: 100;
+}
+
+.BoxLeftBottom_right_ul_span {
+  padding: .5rem 2.5rem;
+  background-color: orange;
+  border-radius: 2rem;
+}
+
+/* Box Right */
+.boxContainRight {
+  width: 55%;
+  height: 100%;
+  color: white;
+}
+
+.boxContainRight_cont_header {
+  width: 40%;
+  height: 80%;
+}
+
+.boxContainRight_cont_header_p_common {
+  height: calc(100% / 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 17rem;
+  font-weight: 500;
+}
+
+.boxContainRight_cont_header_p_common_rotate {
+  transform: rotate(90deg);
+}
+
+.boxContainRight_cont_bottom {
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+
+.boxContainRight_cont_bottom_left {
+  width: 40%;
+  height: 100%;
+}
+
+.boxContainRight_cont_bottom_right {
+  width: 60%;
+  height: 100%;
+}
+
+.boxContainRight_cont_bottom_left_ul,
+.boxContainRight_cont_bottom_right_ul {
+  list-style-type: none;
+  height: 100%;
+  width: 100%;
+  padding: 2rem;
+  letter-spacing: 1px;
+}
+
+.boxContainRight_cont_bottom_left_ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.boxContainRight_cont_bottom_right_ul {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.boxContainRight_cont_bottom_left_ul_gray {
+  color: gray;
+}
+
+/* Work */
+.mainWorkContainerWindow {
+  position: fixed;
+  width: 100%;
+  height: 5000vh; /* Considera un valore più ragionevole */
+  display: flex;
+  background-color: black;
+}
+
+.mainWorkContainerWindow_clock {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 900px;
+  height: 900px;
+  border-radius: 50%;
+  z-index: 10; /* Assicurati che l'orologio sia sopra altri contenuti */
+  background: transparent;
+}
+
+.hour {
+  position: absolute;
+  width: 12px;
+  height: 70px;
+  border: 1px solid rgb(156, 156, 156);
+  text-align: center;
+  line-height: 50px;
+  border-radius: 2rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(calc(30deg * var(--i))) translate(400px) rotate(90deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 500;
+}
+
+.scie {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  z-index: -1;
+  pointer-events: none;
+}
+
+.hour-trail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: transparent;
+}
+
+.hour_dot {
+  display: block;
+  width: .1px;
+  height: 70%;
+  background: rgba(0, 0, 0, 0.584);
+}
+
+.tick {
+  position: absolute;
+  width: .1px;
+  height: 20px; /* Lunghezza del trattino */
+  background-color: rgb(83, 82, 82);
+  border-radius: 2rem;
+  top: 50%;
+  left: 50%;
+  transform-origin: center;
+  transform: translate(-50%, -50%) rotate(calc(3deg * var(--i))) translate(415px) rotate(90deg);
+}
+
+.container_hand {
+  width: 4px;
+  height: 100%;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hand {
+  position: absolute; /* Posiziona la lancetta assolutamente all'interno del contenitore */
+  width: 4px; /* Larghezza della lancetta */
+  height: 100%; /* Altezza della lancetta */
+  background-color: rgb(152, 152, 152); /* Colore della lancetta */
+  bottom: 50%; /* Posiziona la base della lancetta al fondo del contenitore */
+  left: 50%; /* Posiziona la lancetta orizzontalmente al centro del contenitore */
+  transform: translateX(-50%); /* Centra la lancetta orizzontalmente */
+  transform-origin: bottom center; /* Ruota attorno al bordo inferiore, centrato orizzontalmente */
+}
+
+.minute-hand {
+  height: 2000px;
+  border-radius: 2rem;
+}
+
+.minute-trail {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  background: transparent;
+  pointer-events: none;
+  transition: background 0.5s ease-out;
+}
+
+.hour-hand {
+  height: 300px;
+  border-radius: 2rem;
+}
+
+.mainWorkContainerWindow_right {
+  width: 55%;
+  height: 100%;
+  background-color: rgba(0, 0, 255, 0.064);
+}
+
+.mainWorkContainerWindow_left {
+  width: 45%;
+  height: 100%;
+  background-color: rgba(82, 82, 147, 0.095);
+}
+
+.mainWorkContainerWindow_content1 {
+  width: 50%;
+  height: 60%;
+  background-color: rgb(255, 255, 255);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  border-radius: 2rem;
+  overflow: hidden;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+}
+
