@@ -1,4 +1,5 @@
 @use './components//Location.scss';
+@use './components/Studio.scss';
 
 
 * {
@@ -50,32 +51,7 @@ img {
 }
 
 /* Layer al 45% */
-.none {
-  position: fixed;
-  right: -100%;
-  width: 45%;
-  height: 100%;
-  transform: translateX(100%);
-  opacity: 0;
-  visibility: hidden;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  pointer-events: none;
-}
 
-.show {
-  position: fixed;
-  right: 0;
-  width: 170%;
-  height: 100%;
-  transform: translateX(0%);
-  opacity: 1;
-  visibility: visible;
-  transition: transform 1s ease-in-out, opacity 1s ease-in-out;
-  pointer-events: all;
-  display: flex;
-  justify-content: flex-end;
-  z-index: 1000;
-}
 
 .containerWindow {
   position: fixed;
@@ -87,19 +63,10 @@ img {
   width: 100%;
   height: 100vh;
   display: flex;
+  background-color: #041322;
 }
 
-#video {
-  width: 100%;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: -1;
-  object-fit: cover;
-}
+
 
 /* Box Left */
 .boxContainLeft {
@@ -107,13 +74,14 @@ img {
   height: 100%;
 }
 
-.boxContainLeft_menu_topSec {
-  background-color: red;
-  padding: 2rem;
-  color: rgb(0, 0, 0);
-  font-weight: 100;
-  font-size: 2rem;
-}
+// .boxContainLeft_menu_topSec {
+//   width: 55%;
+//   background-color: red;
+//   padding: 2rem;
+//   color: rgb(0, 0, 0);
+//   font-weight: 100;
+//   font-size: 2rem;
+// }
 
 .boxContainLeft_menu_topSec_btn {
   display: flex;
@@ -166,13 +134,30 @@ img {
   width: 100%;
   padding: 2rem;
   color: white;
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
 }
 
-.BoxLeftTopSection_h1,
-.BoxLeftTopSection_h2,
-.BoxLeftTopSection_h3 {
+.BoxLeftTopSection_h1 {
+  font-size: 3.5rem;
+  font-weight: 400;
+  padding-top: 5rem;
+}
+.BoxLeftTopSection_h2 {
   font-size: 2.5rem;
   font-weight: 400;
+}
+.BoxLeftTopSection_h3 {
+  font-size: 2.5rem;
+  font-weight: 300;
+  padding-bottom: 15rem;
+  color: #414770;
+  span {
+    color: #414770;
+  }
 }
 
 .BoxLeftTopSection_h1 {
@@ -252,6 +237,7 @@ img {
 
 .boxContainRight_cont_header_p_common_rotate {
   transform: rotate(90deg);
+  color: orange;
 }
 
 .boxContainRight_cont_bottom {
@@ -450,10 +436,7 @@ img {
   overflow: hidden;
 }
 
-video {
-  width: 100%;
-  height: 100%;
-}
+
 
 
 .locationContainerHiddden {

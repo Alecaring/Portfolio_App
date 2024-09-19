@@ -17,8 +17,8 @@ function MapChart() {
         <ComposableMap
             projection="geoMercator"
             projectionConfig={{
-                scale: 1000,  // Modifica la scala per adattare la mappa
-                center: [10, 50],  // Centro della mappa per una visualizzazione più centrata
+                scale: 600,  // Modifica la scala per adattare la mappa
+                center: [-15, 55],  // Centro della mappa per una visualizzazione più centrata
             }}
             style={{ width: "100%", height: "100%" }}
         >
@@ -29,19 +29,19 @@ function MapChart() {
                             key={geo.rsmKey}
                             geography={geo}
                             fill="#000"
-                            stroke="#fff"
-                            strokeWidth={0.2} // Larghezza del bordo
+                            stroke="orange"
+                            strokeWidth={0.7} // Larghezza del bordo
 
                         />
                     ))
                 }
             </Geographies>
             <Marker coordinates={luxembourgCoordinates}>
-                <circle r={7} fill="#fff" stroke="#fff" strokeWidth={2} />
+                <circle r={7} fill="orange" stroke="orange" strokeWidth={2} />
                 <text
                     textAnchor="middle"
                     y={-20}
-                    style={{ fontFamily: "system-ui", fill: "#5D5A6D" }}
+                    style={{ fontFamily: "system-ui", fill: "#fff", fontWeight: 700 }}
                 >
                     Luxembourg
                 </text>
