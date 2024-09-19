@@ -1,3 +1,6 @@
+@use './components//Location.scss';
+
+
 * {
   padding: 0;
   margin: 0;
@@ -16,16 +19,18 @@ img {
   object-fit: cover;
 }
 
+
+
 /* Layer nero al 100% */
 .noneBannerBlack {
   position: fixed;
-  right: -100%;
+  right: 0%;
   width: 100%;
   height: 100%;
-  background-color: transparent;
+  background-color: #00000090;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 1s ease-out, visibility 1s ease-out;
+  transition: 1s ease-in-out;
   pointer-events: none;
   z-index: 1000;
 }
@@ -35,10 +40,11 @@ img {
   right: 0;
   width: 100%;
   height: 100%;
-  background-color: #00000066; /* Colore del layer nero */
+  background-color: #00000090;
+  /* Colore del layer nero */
   opacity: 1;
   visibility: visible;
-  transition: opacity 1s ease-out, visibility 1s ease-out;
+  transition: 1s ease-in-out;
   pointer-events: all;
   z-index: 1000;
 }
@@ -184,7 +190,7 @@ img {
 .BoxLeftBottom_left,
 .BoxLeftBottom_right {
   width: 50%;
-  height: 50%;
+  
 }
 
 .BoxLeftBottom_left_ul {
@@ -208,14 +214,17 @@ img {
   list-style-type: none;
   display: flex;
   justify-content: flex-end;
-  align-items: flex-end;
+  align-items: center;
   letter-spacing: 1px;
   gap: .7rem;
   font-weight: 100;
 }
 
 .BoxLeftBottom_right_ul_span {
-  padding: .5rem 2.5rem;
+  display: block;
+  padding: .3rem 2rem;
+  height: 100%;
+  width: 100%;
   background-color: orange;
   border-radius: 2rem;
 }
@@ -290,7 +299,8 @@ img {
 .mainWorkContainerWindow {
   position: fixed;
   width: 100%;
-  height: 5000vh; /* Considera un valore più ragionevole */
+  height: 5000vh;
+  /* Considera un valore più ragionevole */
   display: flex;
   background-color: black;
 }
@@ -303,7 +313,8 @@ img {
   width: 900px;
   height: 900px;
   border-radius: 50%;
-  z-index: 10; /* Assicurati che l'orologio sia sopra altri contenuti */
+  z-index: 10;
+  /* Assicurati che l'orologio sia sopra altri contenuti */
   background: transparent;
 }
 
@@ -354,7 +365,8 @@ img {
 .tick {
   position: absolute;
   width: .1px;
-  height: 20px; /* Lunghezza del trattino */
+  height: 20px;
+  /* Lunghezza del trattino */
   background-color: rgb(83, 82, 82);
   border-radius: 2rem;
   top: 50%;
@@ -373,14 +385,22 @@ img {
 }
 
 .hand {
-  position: absolute; /* Posiziona la lancetta assolutamente all'interno del contenitore */
-  width: 4px; /* Larghezza della lancetta */
-  height: 100%; /* Altezza della lancetta */
-  background-color: rgb(152, 152, 152); /* Colore della lancetta */
-  bottom: 50%; /* Posiziona la base della lancetta al fondo del contenitore */
-  left: 50%; /* Posiziona la lancetta orizzontalmente al centro del contenitore */
-  transform: translateX(-50%); /* Centra la lancetta orizzontalmente */
-  transform-origin: bottom center; /* Ruota attorno al bordo inferiore, centrato orizzontalmente */
+  position: absolute;
+  /* Posiziona la lancetta assolutamente all'interno del contenitore */
+  width: 4px;
+  /* Larghezza della lancetta */
+  height: 100%;
+  /* Altezza della lancetta */
+  background-color: rgb(152, 152, 152);
+  /* Colore della lancetta */
+  bottom: 50%;
+  /* Posiziona la base della lancetta al fondo del contenitore */
+  left: 50%;
+  /* Posiziona la lancetta orizzontalmente al centro del contenitore */
+  transform: translateX(-50%);
+  /* Centra la lancetta orizzontalmente */
+  transform-origin: bottom center;
+  /* Ruota attorno al bordo inferiore, centrato orizzontalmente */
 }
 
 .minute-hand {
@@ -435,3 +455,15 @@ video {
   height: 100%;
 }
 
+
+.locationContainerHiddden {
+  position: absolute;
+  bottom: -0%;
+  left: 0;
+  width: 100%;
+  height: 60vh;
+  background-color: rgb(10, 33, 58);
+  z-index: 1000;
+  box-shadow: 0px -20px 20px 0px #414141;
+  transition: 1s ease-in-out;
+}
