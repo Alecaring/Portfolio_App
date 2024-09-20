@@ -3,6 +3,7 @@ import videoSrc from './assets/banner_portfolio.mp4';
 import { useEffect, useRef, useState } from "react";
 import Work from './components/Work';
 import Home from './components/Home';
+import Services from "./components/Services";
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
+        <Route path="/services" element={<Services />} />
       </Routes>
     </BrowserRouter>
   );

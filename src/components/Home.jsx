@@ -25,13 +25,13 @@ function Home() {
     };
 
     return (
-        <div className="containerWindow">
+        <div className="d-flex position-fixed right-0 top-0 left-0 bottom-0 z-index-100 w-100 h-100vh bg-darkBlue">
 
 
             <Location ToggleLocation={ToggleLocation} openLocation={openLocation}></Location>
 
 
-            <div id="menuToHide" className={`${showBannerBlack ? ' showBannerBlack' : ' noneBannerBlack'}`}></div>
+            <div id="menuToHide" className={`${showBannerBlack ? 'position-fixed right-0 w-100 h-100 bg-lightBlack opacity-1 visibility-1 transition-1s-in-out pointer-event-all z-index-1000' : 'position-fixed right-0 w-100 h-100 bg-lightBlack opacity-0 visibility-0 transition-1s-in-out pointer-event-none z-index-1000'}`}></div>
 
 
             <Studio closedMenuBtnElemRef={closedMenuBtnElemRef} handleMenuToggle={handleMenuToggle} closedMenu={closedMenu} />

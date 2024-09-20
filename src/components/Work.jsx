@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import videoSrc from '../assets/banner_portfolio.mp4';
 import { Link } from "react-router-dom";
+import TopNavGoHome from "./common/TopNavGoHome";
 
 function Work() {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -77,25 +78,15 @@ function Work() {
   const content = contents[contentIndex] || { text: "Default content", videoSrc: "", imgSrc: "" };
 
   return (
-    <div className="mainWorkContainerWindow">
-      <div className="topNavigateCont">
-        <Link className="Link" to={'/'}>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-chevron-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-          </svg>
-          <span className="name">Home</span>
-        </Link>
-        <span>
-          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="transparent" class="bi bi-chevron-left" viewBox="0 0 16 16">
-            <path fill-rule="evenodd" d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-          </svg>
-        </span>
-      </div>
-      <div className="mainWorkContainerWindow_clock">
+    <div className="position-fixed w-100 h-5000vh d-flex bg-darkBlue">
+
+      <TopNavGoHome />
+
+      <div className="position-fixed top-50 left-50 translateXY w-900px h-900px radius-circle z-index-10 bg-trasparent">
         {/* Aggiungi le scie */}
-        <div className="scie">
+        <div className="position-absolute w-100 h-100 radius-circle z-index--1 pointer-event-none">
           <div
-            className="minute-trail"
+            className="position-absolute w-100 h-100 radius-circle top-0 left-0 bg-trasparent pointer-event-none transition-bg-0-5-out"
             style={{
               background: `conic-gradient(
                   ${colors[segmentIndex]} ${segmentStartAngle}deg,
@@ -110,29 +101,29 @@ function Work() {
 
         {/* Ore */}
         {[...Array(12)].map((_, i) => (
-          <div className="hour" style={{ "--i": i + 1 }} key={`hour-${i}`}>
-            <span className="hour_dot"></span>
+          <div className="ms_tranform_hour position-absolute w-12px h-70px border-1px-grey text-center line-height-50px radius-2rem top-50 left-50 transform-origin-center d-flex align-items-center justify-content-center z-index-500" style={{ "--i": i + 1 }} key={`hour-${i}`}>
+            <span className="d-b w-1px h-70 bg-black-50"></span>
           </div>
         ))}
 
         {/* Trattini */}
         {[...Array(120)].map((_, i) => (
-          i % 10 !== 0 ? <div className="tick" style={{ "--i": i }} key={`tick-${i}`}></div> : null
+          i % 10 !== 0 ? <div className="ms_transform_tick position-absolute w-1px h-20px bg-dark-grey radius-2rem top-50 left-50 transform-origin-center" style={{ "--i": i }} key={`tick-${i}`}></div> : null
         ))}
 
         {/* Lancette */}
-        <div className="cotainer_hand">
+        <div className="w-4px h-100 position-relative top-50 left-50 translateXY">
           <div
-            className="hand minute-hand"
+            className="position-absolute w-4px h-100 bg-lightGrey bottom-50 left-50 translateX-50 transform-origin-bottom-center h-2000px radius-2rem"
             style={{ transform: `rotate(${minuteAngle}deg)` }}
           ></div>
           <div
-            className="hand hour-hand"
+            className="position-absolute w-4px h-100 bg-lightGrey bottom-50 left-50 translateX-50 transform-origin-bottom-center h-300px radius-2rem"
             style={{ transform: `rotate(${(scrollPosition / 3600) * 30}deg)` }}
           ></div>
         </div>
       </div>
-      <div className="mainWorkContainerWindow_content1">
+      <div className="position-fixed w-50 h-60 bg-white top-50 left-50 translateXY z-index-10 radius-2rem overflow-hidden">
         {/* Contenuto centrale */}
         {/* <p>{content.text}</p> */}
         {/* Video */}
@@ -147,8 +138,6 @@ function Work() {
           <img src={content.imgSrc} alt="Content visual" />
         )}
       </div>
-      <div className="mainWorkContainerWindow_right"></div>
-      <div className="mainWorkContainerWindow_left"></div>
     </div>
   );
 }

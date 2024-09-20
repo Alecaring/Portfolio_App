@@ -1,58 +1,27 @@
+import { Link } from "react-router-dom";
+
 function BoxContainRight({ ToggleLocation }) {
     return (
-        <div className="boxContainRight">
-            <div className="boxContainRight_cont_header">
-                <p className="boxContainRight_cont_header_p_common">5</p>
-                <p className="boxContainRight_cont_header_p_common">0</p>
-                <p className="boxContainRight_cont_header_p_common boxContainRight_cont_header_p_common_rotate">K</p>
+        <div className="c-white h-100 w-55">
+            <div className="h-80 w-40">
+                <p className="h-calc-max-3 d-flex align-items-center justify-content-center fs-17rem fw-500">5</p>
+                <p className="h-calc-max-3 d-flex align-items-center justify-content-center fs-17rem fw-500">0</p>
+                <p className="h-calc-max-3 d-flex align-items-center justify-content-center fs-17rem fw-500 c-orange rotate-90deg">K</p>
             </div>
-            <div className="boxContainRight_cont_bottom">
-                <div className="boxContainRight_cont_bottom_left">
-                    <ul className="boxContainRight_cont_bottom_left_ul">
-                        <li onClick={ToggleLocation} className="boxContainRight_cont_bottom_left_ul_gray">LOCATIONS</li>
+            <div className="w-100 h-20 d-flex">
+                <div className="h-100 w-40">
+                    <ul className="list-style-none h-100 w-100 p-2rem letter-spacing-1px d-flex align-items-end justify-content-between">
+                        <li onClick={ToggleLocation} className="c-grey">LOCATIONS</li>
                         <li>TO & CPH</li>
                     </ul>
                 </div>
-                <div className="boxContainRight_cont_bottom_right">
-                    <ul className="boxContainRight_cont_bottom_right_ul">
-                        <li className="boxContainRight_cont_bottom_left_ul_gray HoverLinkServices">SERVICES</li>
+                <div className="position-relative w-60 h-100">
+                    <ul className="list-style-none h-100 w-100 p-2rem letter-spacing-1px d-flex align-items-end justify-content-end">
+                        <Link to={'/services'}>
+                        <li className="c-grey">SERVICES</li>
+                        </Link>
                     </ul>
-                    <div className="serivesOnHover serivesOnHover2">
-                        <ul>
-                            <h3>Web Development</h3>
-                            <li>Full-stack development with modern frameworks (React, Laravel, Vue, etc.)</li>
-                            <li>Responsive design for mobile and desktop</li>
-                            <li>Custom web applications tailored to client needs</li>
-                            <h3>Mobile App Development</h3>
-                            <li>Cross-platform mobile apps (React Native, Expo)</li>
-                            <li>UI/UX design for mobile interfaces</li>
-                            <li>Performance optimization for iOS and Android</li>
-                            <h3>API Development & Integration</h3>
-                            <li>RESTful APIs for seamless backend communication</li>
-                            <li>API integrations (e.g., third-party services, payment gateways)</li>
-                            <li>Secure and scalable backend services</li>
-                            <h3>E-commerce Solutions</h3>
-                            <li>Custom-built e-commerce platforms</li>
-                            <li>Integration of payment systems and shopping carts</li>
-                            <li>Performance optimization and scalability</li>
-                            <h3>Database Design & Management</h3>
-                            <li>MySQL, PostgreSQL, and NoSQL database solutions</li>
-                            <li>Efficient data models and relationships</li>
-                            <li>Database optimization and management</li>
-                            <h3>Content Management Systems (CMS)</h3>
-                            <li>WordPress development</li>
-                            <li>Custom CMS solutions</li>
-                            <li>Maintenance and updates</li>
-                            <h3>DevOps & Deployment</h3>
-                            <li>Continuous integration/continuous deployment (CI/CD)</li>
-                            <li>Cloud hosting and management (AWS, DigitalOcean)</li>
-                            <li>Version control (Git, GitHub)</li>
-                            <h3>Consulting & Support</h3>
-                            <li>Technical consulting for startups and businesses</li>
-                            <li>Project management and agile methodology</li>
-                            <li>Ongoing maintenance and updates</li>
-                        </ul>
-                    </div>
+                    
                 </div>
             </div>
         </div>
