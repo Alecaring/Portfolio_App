@@ -32,6 +32,10 @@
     height: 20px;
 }
 
+.h-60px {
+    height: 60px;
+}
+
 .h-70px {
     height: 70px;
 }
@@ -60,9 +64,11 @@
 .h-70vh {
     height: 70vh;
 }
+
 .h-15vh {
     height: 15vh;
 }
+
 // calc
 .h-calc-max-3 {
     height: calc(100% / 3);

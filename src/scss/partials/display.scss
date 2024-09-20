@@ -18,14 +18,24 @@
 .visibility-1 {
     visibility: visible;
 }
+
 // overflow
 .overflow-hidden {
     overflow: hidden;
-  }
-  .overflow-auto {
-    overflow: auto;
-  }
+}
 
-  .obj-fit-contain {
+.overflow-auto {
+    overflow: auto;
+}
+
+.obj-fit-contain {
     object-fit: contain;
-  }
+}
+
+.obj-fit-cover {
+    object-fit: cover;
+}
+
+.obj-position-center {
+    object-position: center;
+}
