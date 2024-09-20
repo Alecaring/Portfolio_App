@@ -1,0 +1,54 @@
+// %
+.w-100 {
+    width: 100%;
+}
+
+.w-80 {
+    width: 80%;
+}
+
+.w-60 {
+    width: 60%;
+}
+
+.w-55 {
+    width: 55%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-40 {
+    width: 40%;
+}
+
+.w-45 {
+    width: 45%;
+}
+
+// px
+.w-1px {
+    width: .1px;
+}
+
+.w-4px {
+    width: 4px;
+}
+
+.w-12px {
+    width: 12px;
+}
+
+.w-15px {
+    width: 15px;
+}
+
+.w-900px {
+    width: 900px;
+}
+
+// calc
+.w-calc-max-5 {
+    width: calc(100% / 5 - 1rem);
+}

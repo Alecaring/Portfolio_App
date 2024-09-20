@@ -1,0 +1,31 @@
+.d-b {
+    display: block;
+}
+
+.d-flex {
+    display: flex;
+}
+
+.display-i-b {
+    display: inline-block;
+}
+
+// visibility
+.visibility-0 {
+    visibility: hidden;
+}
+
+.visibility-1 {
+    visibility: visible;
+}
+// overflow
+.overflow-hidden {
+    overflow: hidden;
+  }
+  .overflow-auto {
+    overflow: auto;
+  }
+
+  .obj-fit-contain {
+    object-fit: contain;
+  }

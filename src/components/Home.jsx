@@ -14,6 +14,89 @@ function Home() {
     const [openLocation, setOpenLocation] = useState(false);
     const closedMenuBtnElemRef = useRef(null);
 
+    const logos = [
+        {
+            path: '/php_logo.png',
+            alt: 'php logo',
+        },
+        {
+            path: '/JavaScript.png',
+            alt: 'JavaScript logo',
+        },
+        {
+            path: '/TypeScript.png',
+            alt: 'TypeScript logo',
+        },
+        {
+            path: '/react_logo.png',
+            alt: 'React logo',
+        },
+        {
+            path: '/vue_logo.png',
+            alt: 'Vue logo',
+        },
+        {
+            path: '/Bootstrap.png',
+            alt: 'Bootstrap logo',
+        },
+        {
+            path: '/HTML5.png',
+            alt: 'HTML5 logo',
+        },
+        {
+            path: '/react_native_logo.png',
+            alt: 'React Native logo',
+        },
+        {
+            path: '/Git.png',
+            alt: 'Git logo',
+        },
+        {
+            path: '/laravel_logo.png',
+            alt: 'Laravel logo',
+        },
+        {
+            path: '/Vite_logo.png',
+            alt: 'Vite logo',
+        },
+        {
+            path: '/GitHub.svg',
+            alt: 'GitHub logo',
+        },
+        {
+            path: '/NPM.png',
+            alt: 'NPM logo',
+        },
+        {
+            path: '/Composer.png',
+            alt: 'Composer logo',
+        },
+        {
+            path: '/Postman.png',
+            alt: 'Postman logo',
+        },
+        {
+            path: '/CSS3.png',
+            alt: 'CSS3 logo',
+        },
+        {
+            path: '/Sass.png',
+            alt: 'Sass logo',
+        },
+        {
+            path: '/MySQL.png',
+            alt: 'MySQL logo',
+        },
+        {
+            path: '/VisualStudioCode.png',
+            alt: 'VisualStudioCode logo',
+        },
+        {
+            path: '/Canva.png',
+            alt: 'Canva logo',
+        }
+    ];
+
     const handleMenuToggle = () => {
         setClosedMenu(prevClosedMenu => !prevClosedMenu);
         setShowBannerBlack(prevShow => !prevShow);
@@ -34,7 +117,7 @@ function Home() {
             <div id="menuToHide" className={`${showBannerBlack ? 'position-fixed right-0 w-100 h-100 bg-lightBlack opacity-1 visibility-1 transition-1s-in-out pointer-event-all z-index-1000' : 'position-fixed right-0 w-100 h-100 bg-lightBlack opacity-0 visibility-0 transition-1s-in-out pointer-event-none z-index-1000'}`}></div>
 
 
-            <Studio closedMenuBtnElemRef={closedMenuBtnElemRef} handleMenuToggle={handleMenuToggle} closedMenu={closedMenu} />
+            <Studio closedMenuBtnElemRef={closedMenuBtnElemRef} handleMenuToggle={handleMenuToggle} closedMenu={closedMenu} logos={logos} />
 
 
             <BoxContainRight ToggleLocation={ToggleLocation} />
