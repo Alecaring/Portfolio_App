@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import Location from "./Location";
 import BoxContainRight from "./common/BoxHomeRight";
 import BoxContainLeft from "./common/BoxHomeLeft";
+import Studio from "./Studio";
 
 
 
@@ -33,13 +34,7 @@ function Home() {
             <div id="menuToHide" className={`${showBannerBlack ? ' showBannerBlack' : ' noneBannerBlack'}`}></div>
 
 
-            <div className={`${closedMenu ? ' showStudio' : ' noneStudio'}`}>
-                <div className="StudiotopContWhereX">
-                    <span ref={closedMenuBtnElemRef} onClick={handleMenuToggle} className="boxContainLeft_menu_topSec_btn">
-                        X
-                    </span>
-                </div>
-            </div>
+            <Studio closedMenuBtnElemRef={closedMenuBtnElemRef} handleMenuToggle={handleMenuToggle} closedMenu={closedMenu} />
 
 
             <BoxContainRight ToggleLocation={ToggleLocation} />

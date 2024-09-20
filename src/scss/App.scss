@@ -1,5 +1,6 @@
 @use './components//Location.scss';
 @use './components/Studio.scss';
+@use './components/Services.scss';
 
 
 * {
@@ -83,15 +84,7 @@ img {
 //   font-size: 2rem;
 // }
 
-.boxContainLeft_menu_topSec_btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background-color: #fff;
-}
+
 
 /* Box Left - Top */
 .BoxLeftTop {
@@ -146,15 +139,18 @@ img {
   font-weight: 400;
   padding-top: 5rem;
 }
+
 .BoxLeftTopSection_h2 {
   font-size: 2.5rem;
   font-weight: 400;
 }
+
 .BoxLeftTopSection_h3 {
   font-size: 2.5rem;
   font-weight: 300;
   padding-bottom: 15rem;
   color: #414770;
+
   span {
     color: #414770;
   }
@@ -175,7 +171,7 @@ img {
 .BoxLeftBottom_left,
 .BoxLeftBottom_right {
   width: 50%;
-  
+
 }
 
 .BoxLeftBottom_left_ul {
@@ -252,6 +248,7 @@ img {
 }
 
 .boxContainRight_cont_bottom_right {
+  position: relative;
   width: 60%;
   height: 100%;
 }
@@ -281,6 +278,8 @@ img {
   color: gray;
 }
 
+
+
 /* Work */
 .mainWorkContainerWindow {
   position: fixed;
@@ -289,6 +288,31 @@ img {
   /* Considera un valore più ragionevole */
   display: flex;
   background-color: black;
+}
+
+.topNavigateCont {
+  width: 100%;
+  height: 15vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 5000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 3rem;
+
+  .Link {
+    display: flex;
+    align-items: center;
+
+    .name {
+      padding-left: 1rem;
+      color: white;
+      font-size: 2rem;
+      font-weight: 100;
+    }
+  }
 }
 
 .mainWorkContainerWindow_clock {
